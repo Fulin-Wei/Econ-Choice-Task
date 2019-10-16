@@ -8,4 +8,4 @@ Choice(2,:) = sum(ChoiceMAT(:,2:end - 1));
 
 [b] = glmfit(x, Choice', 'binomial', 'link', 'probit');
 IP = -b(1)/b(2);
-Sigma = -b(2);
+Sigma = -1/b(2);
